@@ -1,0 +1,23 @@
+ul {
+  background-color: grey;
+  width: 50%;
+  margin-left:auto;
+  margin-right: auto;
+  list-style:none;
+  padding: 0;
+}
+
+li {
+  text-align: center;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+p{
+  width: 90%;
+  border: 1px solid black;
+  margin-left:auto;
+  margin-right:auto;
+}
