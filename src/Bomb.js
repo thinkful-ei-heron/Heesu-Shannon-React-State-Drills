@@ -32,11 +32,10 @@ class Bomb extends React.Component {
     render() {
         return(
             <div>
-                <p>{this.display}</p>
+                <p>{this.display()}</p>
             </div>
         )
     }
-
 }
 
 export default Bomb;
