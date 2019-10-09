@@ -9,9 +9,9 @@ class Bomb extends React.Component {
 
     componentDidMount() {
         this.interval = setInterval(() => {
-          this.setState({
-            count: this.state.count += 1
-          })
+            this.setState({
+                count: this.state.count + 1
+            })
         }, 1000)
     }
 
@@ -20,9 +20,9 @@ class Bomb extends React.Component {
     }
 
     display() {
-        if(this.state.count >= 8) {
+        if (this.state.count >= 8) {
             return 'BOOM!!'
-        } else if (this.state.count % 2 === 0){
+        } else if (this.state.count % 2 === 0) {
             return 'tick'
         } else {
             return 'tock'
@@ -30,7 +30,7 @@ class Bomb extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <div>
                 <p>{this.display()}</p>
             </div>
