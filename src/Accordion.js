@@ -4,18 +4,25 @@ class Accordian extends React.Component {
     static props = {
         sections: []
     };
+    state = {
+        displayToggle: null,
+    }
 
-    handleClick() {
-        console.log(e.currentTarget);
-        
+    handleClick = (i) => { 
+            this.setState({displayToggle: i})
     }
 
     render() {
         return(
             <ul>
-                {this.props.sections.map(item => {
+                {this.props.sections.map((item, i) => {
                     return (
-                        <li><button onClick={()=> this.handleClick()}>{item.title}</button></li>
+                        <li key= {i}>
+                            <button onClick={()=> this.handleClick(i)}>
+                                {item.title}
+                            </button>
+                            {(this.state.displayToggle === i) && <p>{item.content}</p>}
+                        </li>
                         
                     );  
                 })}
