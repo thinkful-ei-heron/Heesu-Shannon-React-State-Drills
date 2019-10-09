@@ -1,7 +1,7 @@
 import React from 'react';
 
 class Accordian extends React.Component {
-    static props = {
+    static defaultProps = {
         sections: []
     };
     state = {
@@ -13,19 +13,20 @@ class Accordian extends React.Component {
     }
 
     render() {
+        
         return(
             <ul>
-                {this.props.sections.map((item, i) => {
+                {(this.props.sections !== []) ? 
+                (this.props.sections.map((item, i) => {
                     return (
                         <li key= {i}>
                             <button onClick={()=> this.handleClick(i)}>
                                 {item.title}
                             </button>
                             {(this.state.displayToggle === i) && <p>{item.content}</p>}
-                        </li>
-                        
-                    );  
-                })}
+                    </li> )  
+                })) : ''
+            }
             </ul>
         )
     }
