@@ -5,23 +5,21 @@ class Accordian extends React.Component {
         section: []
     };
 
-    generateList = () => {
-        this.props.section.map(item => {
-            console.log(item.title);
-            return 'hi'
-            //<li><button>{item.title}</button></li>
+    // generateList = () => {
+    //     this.props.section.map(item => {
+    //         console.log(item.title);
+    //         return 'hi'
+    //         //<li><button>{item.title}</button></li>
         
-        })
-    }
-
-
+    //     })
+    // }
 
     render() {
         return(
             <ul>
-                hello
-                {this.generateList()}
-                {/* <li><button onClick={()=> this.handleClick()}></button></li> */}
+                this.props.section.map((item)) => {
+                    return <li><button>{item.title}</button></li>})
+                {/* <li><button onClick={()=> this.handleClick()}></button></li>  */}
             </ul>
         )
     }
