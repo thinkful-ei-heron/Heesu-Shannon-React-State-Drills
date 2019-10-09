@@ -21,4 +21,4 @@ const sections = [
     },
 ];
 
-ReactDOM.render(<Accordian section={sections}/>, document.getElementById('root'));
+ReactDOM.render(<Accordian sections={sections}/>, document.getElementById('root'));

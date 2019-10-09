@@ -2,24 +2,23 @@ import React from 'react';
 
 class Accordian extends React.Component {
     static props = {
-        section: []
+        sections: []
     };
 
-    // generateList = () => {
-    //     this.props.section.map(item => {
-    //         console.log(item.title);
-    //         return 'hi'
-    //         //<li><button>{item.title}</button></li>
+    handleClick() {
+        console.log(e.currentTarget);
         
-    //     })
-    // }
+    }
 
     render() {
         return(
             <ul>
-                this.props.section.map((item)) => {
-                    return <li><button>{item.title}</button></li>})
-                {/* <li><button onClick={()=> this.handleClick()}></button></li>  */}
+                {this.props.sections.map(item => {
+                    return (
+                        <li><button onClick={()=> this.handleClick()}>{item.title}</button></li>
+                        
+                    );  
+                })}
             </ul>
         )
     }
